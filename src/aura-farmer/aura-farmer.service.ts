@@ -45,10 +45,6 @@ export class AuraFarmerService {
     return this.auraFarmerRepository.findOneBy({ auraFarmerId: id });
   }
   
-  create(auraFarmer: Partial<AuraFarmer>): Promise<AuraFarmer> {
-    return this.auraFarmerRepository.save(auraFarmer);
-  }
-
   async requestAddingAuraFarmer(auraFarmerAddReq: Partial<AuraFarmerAddReq>): Promise<AuraFarmerAddReq> {
     const existingAuraFarmerAddReq = await this.auraFarmerAddReqRepository.findOneBy({ name: Like(`%${auraFarmerAddReq.name}%`) });
     if (existingAuraFarmerAddReq) {

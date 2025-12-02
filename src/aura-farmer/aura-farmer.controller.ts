@@ -21,11 +21,6 @@ export class AuraFarmerController {
   }
 
 
-  @Put()
-  update(@Body() auraFarmer: Partial<AuraFarmer>) {
-    return this.auraFarmerService.create(auraFarmer);
-  }
-
   @UseGuards(ThrottlerGuard)
   @Post(':id/update-vote')
   updateVote(@Param('id') id: string) {
