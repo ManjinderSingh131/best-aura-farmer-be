@@ -24,7 +24,7 @@ import { AuraShowcaseSubmission } from './aura-farmer/entities/aura-showcase-sub
       type: 'sqlite',
       database: 'db.sqlite',
       entities: [AuraFarmer, AuraFarmerAddReq, AuraFarmShowcase, AuraShowcaseSubmission],
-      synchronize: true,
+      synchronize: false,
     }),
     AuraFarmerModule,
   ],
